@@ -213,7 +213,7 @@ hr {
 /*-- Grid RESERVAS --*/
 .reservas {
   display: grid;
-  grid-template-areas: "titulo" "formulario";
+  grid-template-areas: "titulo" "formulario" "footer";
   grid-template-columns: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
@@ -225,6 +225,9 @@ hr {
 
 .reservas__formulario {
   grid-area: formulario; }
+
+.reservas__footer {
+  grid-area: footer; }
 
 .reservas__infoPersonal {
   display: grid;

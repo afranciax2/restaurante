@@ -239,7 +239,8 @@ hr{
     display: grid;
     grid-template-areas:
     "titulo"
-    "formulario";
+    "formulario"
+    "footer";
     grid-template-columns: 1fr;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
