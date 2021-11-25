@@ -1,0 +1,19 @@
+$reservasMap:(
+    titulo: titulo,
+    formulario: formulario
+);
+
+$infoPersonalMap:(
+    nombres: nombres,
+    apellidos: apellidos,
+    estadoCivil: estadoCivil,
+    celular: celular,
+    correo: correo
+);
+
+$infoReservaMap:(
+    numerosPersonas: numerosPersonas,
+    fecha: fecha,
+    llegada: llegada,
+    contactarCli: contactarCli
+);

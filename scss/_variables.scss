@@ -1,0 +1,20 @@
+/* Variables de colores */
+$colorPrincipal: #F2F2F2;
+$colorSecundario:#0D267A;
+$colorTerceario: white;
+$colorTexto:     #262C29;
+$colorSombra:    grey;
+$colorGradiente: $colorPrincipal, $colorPrincipal, $colorPrincipal, $colorPrincipal, #506AD4;
+$colorMax: black;
+$colorInt: red;
+$colorMin: yellow;
+
+/* Variables de texto */
+$fuentePrincipal: 'Ubuntu Mono', monospace;
+$fuenteSecundaria:'Playfair Display SC', serif;
+$sombreTexto: 6px 4px 6px $colorSombra;
+$tamanoTextoH1: 5vh;
+
+/* Variables de box */
+$borde: 1px solid $colorSecundario;
+$sombraCaja: 6px 4px 6px $colorSombra;

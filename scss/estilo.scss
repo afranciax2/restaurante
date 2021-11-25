@@ -1,0 +1,452 @@
+@import "_variables";
+@import "_home";
+@import "_nosotros";
+@import "_carta";
+@import "reservas";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Propiedades generales*/
+body{
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    text-align:justify;
+    font-family: $fuentePrincipal;
+}
+
+/*main__titulo*/
+h1{
+    color: $colorSecundario;
+    font-family: $fuenteSecundaria;
+    font-size: $tamanoTextoH1;
+    text-transform: uppercase;
+    text-shadow: $sombreTexto;
+    /*-- Animaciones --*/
+    animation-duration: 3s;
+    animation-name: aparecer;
+}
+
+ h2{
+    color: $colorSecundario;
+    font-family: $fuenteSecundaria;
+    text-shadow: $sombreTexto;
+}
+
+
+ /*Menú de navegacón*/
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $colorPrincipal;
+}
+
+.header__menu{
+    a{
+        border: $borde;
+        box-shadow: $sombraCaja;
+        color: $colorSecundario; 
+        display:block;
+        font-size: 1em;
+        margin-right: 0.12em;
+        padding:  0.6em 1em;
+        text-decoration:none;
+    }
+}
+
+.header__menu{
+    li{
+        position: relative;
+        list-style: none;
+        display: inline-block;
+        &:hover{
+            background-color: $colorTerceario;
+        }
+    }
+}
+
+.header__menu{
+    ul{
+        background-color: $colorPrincipal;
+        display: none;
+        font-size: 0.9em;
+        left: 0;
+        list-style: none;
+        margin: 0.12em;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        width: 111px;
+    }
+}
+
+.header__menu li:hover > ul{
+	display: block;
+}
+
+.header__menu--formato{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+
+/*Formato de tabla*/
+table{
+    tr{
+        th{
+            background-color: $colorSecundario;
+            color: $colorTerceario;
+            text-align: center;
+        }
+    }
+}
+
+.carta__table{
+    border-spacing: 10px;
+    border-collapse:separate;
+    border-style:groove;
+    border-radius: 4%;
+}
+
+/*Formato de las imágenes
+.contornoGrid{
+    border: solid 0.18em $colorSecundario;
+    margin-bottom: 4%;
+    border-radius: 4%;
+}
+*/
+
+/*Formato de formulario*/
+.reservas__botones{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+label, legend{
+        padding: 0.5%;
+        margin: 0.5;
+}
+
+/*Línea*/
+hr{
+    border: $borde;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+
+/* Media Queries*/
+@media only screen and (min-width: 768px){
+    body{
+        background-color: $colorMax;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 321px){
+    body{
+        background-color: $colorInt;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        background-color: $colorMin;
+    }
+}
+
+
+/*-- Grid HOME --*/
+.home{
+    display: grid;
+    grid-template-areas:
+    "seccion1"
+    "seccion2"
+    "seccion3";
+    grid-template-columns: 1fr; 
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codHome, $desHome in $homeMap{
+    .home__#{$codHome}{
+        grid-area: $desHome;
+    }
+}
+
+/*.home__imagen{
+    border: solid 0.18em $colorSecundario;
+    margin-bottom: 4%;
+    border-radius: 4%;
+}*/
+
+/*-- Grid NOSOTROS--*/
+.nosotros{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "equipo"
+    "parrafo1"
+    "parrafo2"
+    "enlaceYoutube"
+    "mision"
+    "parrafo3"
+    "vision"
+    "parrafo4";
+    grid-template-columns: 1fr; 
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codNom, $desNom in $nosotrosMap{
+    .nosotros__#{$codNom}{
+        grid-area: $desNom;
+    }
+}
+
+/*-- Grid CARTA --*/
+.carta{
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "parrafo parrafo"
+    "desayunos entradas"
+    "sopas almuerzos";
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codCar, $desCar in $cartaMap{
+    .carta__#{$codCar}{
+        grid-area: $desCar;
+    }
+}
+
+/*-- Grid RESERVAS --*/
+.reservas{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "formulario";
+    grid-template-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codRes, $desRes in $reservasMap{
+    .reservas__#{$codRes}{
+        grid-area: $desRes;
+    }
+}
+
+.reservas__infoPersonal{
+    display: grid;
+    grid-template-areas: 
+    "nombres apellidos"
+    "estadoCivil estadoCivil"
+    "celular correo";
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codInfoPer, $desInfoPer in $infoPersonalMap{
+    .reservas__#{$codInfoPer}{
+        grid-area: $desInfoPer;
+    }
+}
+
+.reservas__infoReservas{
+    display: grid;
+    grid-template-areas: 
+    "numerosPersonas fecha llegada"
+    "contactarCli contactarCli contactarCli";
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+@each $codInfoRes, $desInfoRes in $infoReservaMap{
+    .reservas__#{$codInfoRes}{
+        grid-area: $desInfoRes;
+    }
+}
+
+
+/*-- Grid de FOOTER --*/
+.footer{
+    display: grid;
+    grid-template-areas:
+    "redes copyright libro";
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer__redes{
+    grid-area: redes;
+}
+
+.footer__copyright{
+    grid-area: copyright;
+}
+
+.footer__libro{
+    grid-area: libro;
+}
+
+/*-- Grid footer/redes  --*/
+.footer__redes--grid{
+    display: grid;
+    grid-template-areas: 
+    "facebook instagram whatsapp";
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer__facebook{
+    grid-area: facebook;
+}
+
+.footer__instagram{
+    grid-area: instagram;
+}
+
+.footer__whatsapp{
+    grid-area: whatsapp;
+}
+
+
+/*-- Grid Contacto.html --*/
+.gridBodyContacto{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 1fr 4fr 2fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+
+.mainGridContacto{
+    display: grid;
+    grid-template-areas:
+    "subtitulo1"
+    "direccion"
+    "celular"
+    "correo"
+    "subtitulo2"
+    "dia"
+    "hora";
+    grid-template-columns: 12fr; 
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.subtitulo1{
+    grid-area: subtitulo1;
+}
+
+.direccion{
+    grid-area: subtitdireccion;
+}
+
+.celular{
+    grid-area: celular;
+}
+
+.correo{
+    grid-area: correo;
+}
+
+.subtitulo2{
+    grid-area: subtitulo2;
+}
+
+.dia{
+    grid-area: dia;
+}
+
+.hora{
+    grid-area: hora;
+}
+
+@keyframes aparecer{
+    0%{opacity: 0;}
+    50%{opacity: 0.50;}
+    100%{opacity: 1;}
+}
+
+.gradienteBody{
+    background-image: linear-gradient(to bottom, $colorGradiente);
+}
+
+.scaleFooter:hover{
+    transform: scale(1.3);
+}
+
+.transicion{
+    transition: transform 2s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+
+/*Espacio de elementos*/
+@mixin margenes($marl, $marb, $marr) {
+    margin-left: $marl;
+    margin-bottom: $marb;
+    margin-right: $marr;
+ }
+ .formatoEspacio{
+    @include margenes(4%, 2%, 4%);
+ }
+
+ /*Error*/
+
+ .error__div{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+ }

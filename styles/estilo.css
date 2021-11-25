@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/* Variables de colores */
+/* Variables de texto */
+/* Variables de box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Propiedades generales*/
+body {
+  background-color: #F2F2F2;
+  color: #0D267A;
+  text-align: justify;
+  font-family: "Ubuntu Mono", monospace; }
+
+/*main__titulo*/
+h1 {
+  color: #0D267A;
+  font-family: "Playfair Display SC", serif;
+  font-size: 5vh;
+  text-transform: uppercase;
+  text-shadow: 6px 4px 6px grey;
+  /*-- Animaciones --*/
+  animation-duration: 3s;
+  animation-name: aparecer; }
+
+h2 {
+  color: #0D267A;
+  font-family: "Playfair Display SC", serif;
+  text-shadow: 6px 4px 6px grey; }
+
+/*Menú de navegacón*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #F2F2F2; }
+
+.header__menu a {
+  border: 1px solid #0D267A;
+  box-shadow: 6px 4px 6px grey;
+  color: #0D267A;
+  display: block;
+  font-size: 1em;
+  margin-right: 0.12em;
+  padding: 0.6em 1em;
+  text-decoration: none; }
+
+.header__menu li {
+  position: relative;
+  list-style: none;
+  display: inline-block; }
+  .header__menu li:hover {
+    background-color: white; }
+
+.header__menu ul {
+  background-color: #F2F2F2;
+  display: none;
+  font-size: 0.9em;
+  left: 0;
+  list-style: none;
+  margin: 0.12em;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  width: 111px; }
+
+.header__menu li:hover > ul {
+  display: block; }
+
+.header__menu--formato {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; }
+
+/*Formato de tabla*/
+table tr th {
+  background-color: #0D267A;
+  color: white;
+  text-align: center; }
+
+.carta__table {
+  border-spacing: 10px;
+  border-collapse: separate;
+  border-style: groove;
+  border-radius: 4%; }
+
+/*Formato de las imágenes
+.contornoGrid{
+    border: solid 0.18em $colorSecundario;
+    margin-bottom: 4%;
+    border-radius: 4%;
+}
+*/
+/*Formato de formulario*/
+.reservas__botones {
+  margin-top: 2%;
+  margin-bottom: 2%; }
+
+label, legend {
+  padding: 0.5%;
+  margin: 0.5; }
+
+/*Línea*/
+hr {
+  border: 1px solid #0D267A;
+  margin-right: 4%;
+  margin-left: 4%; }
+
+/* Media Queries*/
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: black; } }
+
+@media only screen and (max-width: 767px) and (min-width: 321px) {
+  body {
+    background-color: red; } }
+
+@media only screen and (max-width: 320px) {
+  body {
+    background-color: yellow; } }
+
+/*-- Grid HOME --*/
+.home {
+  display: grid;
+  grid-template-areas: "seccion1" "seccion2" "seccion3";
+  grid-template-columns: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  justify-items: center;
+  align-items: center; }
+
+.home__seccion1 {
+  grid-area: seccion1; }
+
+.home__seccion2 {
+  grid-area: seccion2; }
+
+.home__seccion3 {
+  grid-area: seccion3; }
+
+/*.home__imagen{
+    border: solid 0.18em $colorSecundario;
+    margin-bottom: 4%;
+    border-radius: 4%;
+}*/
+/*-- Grid NOSOTROS--*/
+.nosotros {
+  display: grid;
+  grid-template-areas: "titulo" "equipo" "parrafo1" "parrafo2" "enlaceYoutube" "mision" "parrafo3" "vision" "parrafo4";
+  grid-template-columns: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  justify-items: center;
+  align-items: center; }
+
+.nosotros__titulo {
+  grid-area: titulo; }
+
+.nosotros__equipo {
+  grid-area: equipo; }
+
+.nosotros__parrafo1 {
+  grid-area: parrafo1; }
+
+.nosotros__parrafo2 {
+  grid-area: parrafo2; }
+
+.nosotros__enlaceYoutube {
+  grid-area: enlaceYoutube; }
+
+.nosotros__mision {
+  grid-area: mision; }
+
+.nosotros__parrafo3 {
+  grid-area: parrafo3; }
+
+.nosotros__vision {
+  grid-area: vision; }
+
+.nosotros__parrafo4 {
+  grid-area: parrafo4; }
+
+/*-- Grid CARTA --*/
+.carta {
+  display: grid;
+  grid-template-areas: "titulo titulo" "parrafo parrafo" "desayunos entradas" "sopas almuerzos";
+  grid-template-columns: 6fr 6fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  justify-items: center;
+  align-items: center; }
+
+.carta__titulo {
+  grid-area: titulo; }
+
+.carta__parrafo {
+  grid-area: parrafo; }
+
+.carta__desayunos {
+  grid-area: desayunos; }
+
+.carta__entradas {
+  grid-area: entradas; }
+
+.carta__sopas {
+  grid-area: sopas; }
+
+.carta__almuerzos {
+  grid-area: almuerzos; }
+
+/*-- Grid RESERVAS --*/
+.reservas {
+  display: grid;
+  grid-template-areas: "titulo" "formulario";
+  grid-template-columns: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  justify-items: center;
+  align-items: center; }
+
+.reservas__titulo {
+  grid-area: titulo; }
+
+.reservas__formulario {
+  grid-area: formulario; }
+
+.reservas__infoPersonal {
+  display: grid;
+  grid-template-areas: "nombres apellidos" "estadoCivil estadoCivil" "celular correo";
+  grid-template-columns: 6fr 6fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: center; }
+
+.reservas__nombres {
+  grid-area: nombres; }
+
+.reservas__apellidos {
+  grid-area: apellidos; }
+
+.reservas__estadoCivil {
+  grid-area: estadoCivil; }
+
+.reservas__celular {
+  grid-area: celular; }
+
+.reservas__correo {
+  grid-area: correo; }
+
+.reservas__infoReservas {
+  display: grid;
+  grid-template-areas: "numerosPersonas fecha llegada" "contactarCli contactarCli contactarCli";
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: center; }
+
+.reservas__numerosPersonas {
+  grid-area: numerosPersonas; }
+
+.reservas__fecha {
+  grid-area: fecha; }
+
+.reservas__llegada {
+  grid-area: llegada; }
+
+.reservas__contactarCli {
+  grid-area: contactarCli; }
+
+/*-- Grid de FOOTER --*/
+.footer {
+  display: grid;
+  grid-template-areas: "redes copyright libro";
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  align-items: center; }
+
+.footer__redes {
+  grid-area: redes; }
+
+.footer__copyright {
+  grid-area: copyright; }
+
+.footer__libro {
+  grid-area: libro; }
+
+/*-- Grid footer/redes  --*/
+.footer__redes--grid {
+  display: grid;
+  grid-template-areas: "facebook instagram whatsapp";
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-column-gap: 10px;
+  justify-items: center;
+  align-items: center; }
+
+.footer__facebook {
+  grid-area: facebook; }
+
+.footer__instagram {
+  grid-area: instagram; }
+
+.footer__whatsapp {
+  grid-area: whatsapp; }
+
+/*-- Grid Contacto.html --*/
+.gridBodyContacto {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 1fr 4fr 2fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+  justify-items: center;
+  align-items: center; }
+
+.header {
+  grid-area: header; }
+
+.main {
+  grid-area: main; }
+
+.footer {
+  grid-area: footer; }
+
+.mainGridContacto {
+  display: grid;
+  grid-template-areas: "subtitulo1" "direccion" "celular" "correo" "subtitulo2" "dia" "hora";
+  grid-template-columns: 12fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+  justify-items: center;
+  align-items: center; }
+
+.subtitulo1 {
+  grid-area: subtitulo1; }
+
+.direccion {
+  grid-area: subtitdireccion; }
+
+.celular {
+  grid-area: celular; }
+
+.correo {
+  grid-area: correo; }
+
+.subtitulo2 {
+  grid-area: subtitulo2; }
+
+.dia {
+  grid-area: dia; }
+
+.hora {
+  grid-area: hora; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.50; }
+  100% {
+    opacity: 1; } }
+
+.gradienteBody {
+  background-image: linear-gradient(to bottom, #F2F2F2, #F2F2F2, #F2F2F2, #F2F2F2, #506AD4); }
+
+.scaleFooter:hover {
+  transform: scale(1.3); }
+
+.transicion {
+  transition: transform 2s; }
+  .transicion:hover {
+    transform: scale(1.2); }
+
+/*Espacio de elementos*/
+.formatoEspacio {
+  margin-left: 4%;
+  margin-bottom: 2%;
+  margin-right: 4%; }
+
+/*Error*/
+.error__div {
+  display: grid;
+  justify-items: center;
+  align-items: center; }

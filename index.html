@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Comida criolla, Comida maleña, Comida peruana, Ceviche, Carapulca, Arroz con pato, restaurante en el sur">
+    <meta name="description" content="El restaurante Casa Blanca les da la bienvenida, aquí podrás disfrutar la mejor comida peruana en el sur de Lima, ubicado en el km 88.5 de la antigua Panamericana Sur.">
+    <link rel="stylesheet" href="./styles/estilo.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/multimedia/imagen/favicon.png">
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Rest. Casa Blanca: Home</title>
+</head>
+
+<body class="gradienteBody">
+    <!--lead-->
+    <!--Sección 01 / Menú-->
+    <header class="header">
+        <nav class="header__navegacion">
+            <ul class="header__menu header__menu--formato">
+                <li class="header__botones">
+                    <a class="header__enlace" href="index.html">HOME</a>
+                </li>
+                <li class="header__botones">
+                    <a class="header__enlace" href="./pages/nosotros.html">NOSOTROS</a>
+                    <ul class="header__submenu">
+                        <li class="header__subotones">
+                            <a class="header__enlace" href="./pages/nosotros.html#equipo">El Equipo</a>
+                        </li>
+                        <li class="header__subotones">
+                            <a class="header__enlace" href="./pages/nosotros.html#mision">Misión</a>
+                        </li>
+                        <li class="header__subotones">
+                            <a class="header__enlace" href="./pages/nosotros.html#vision">Visión</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__botones">
+                    <a class="header__enlace" href="./pages/carta.html">LA CARTA</a>
+                </li>
+                <li class="header__botones">
+                    <a class="header__enlace" href="./pages/reservas.html">RESERVAS</a>
+                </li>
+                <li class="header__botones">
+                    <a class="header__enlace" href="./pages/contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección 02 / Imágenes-->
+    <main class="home">
+        <section class="home__seccion1">
+            <h1 class="home__titulo">Restaurante</h1>
+        </section>
+        <section class="home__seccion2">
+            <img class="home__logo transicion" src="multimedia/imagen/logo.PNG" alt="Logotipo Casablanca">
+        </section>
+        <section class="home__seccion3">
+            <div id="carouselExampleFade" class="carousel carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner transicion">
+                    <div class="carousel-item active">
+                        <img src="./multimedia/carrusel/comida01.jpg" class="d-block w-100" alt="Lomo saltado">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./multimedia/carrusel/comida02.jpg" class="d-block w-100" alt="Fetuccini a la huancaina">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./multimedia/carrusel/comida03.jpg" class="d-block w-100" alt="Choritos a la chalaca">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!--Sección 03 / Pie de página-->
+    <footer class="footer">
+        <div class="footer__redes footer__redes--grid">
+            <div class="footer__facebook scaleFooter transicion">
+                <a class="footer__enlace" href="#">
+                    <img class="footer__imagen" src="./multimedia/imagen/iconoFacebook.png" alt="Ícono de Facebook">
+                </a>
+            </div>
+            <div class="footer__instagram scaleFooter transicion">
+                <a class="footer__enlace" href="#">
+                    <img class="footer__imagen" src="./multimedia/imagen/iconoInstagram.png" alt="Ícono de Instagram">
+                </a>
+            </div>
+            <div class="footer__whatsapp scaleFooter transicion">
+                <a class="footer__enlace" href="#">
+                    <img class="footer__imagen" src="./multimedia/imagen/iconoWhatsapp.png" alt="Ícono de Whatsapp">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__copyright transicion">
+            <p class="footer__parrafo">
+                <b class="footer__negrita">©2021 Restaurante Casablanca</b>
+            </p>
+        </div>
+
+        <div class="footer__libro scaleFooter transicion">
+            <a class="footer__enlace" href="#">
+                <img class="footer__imagen" src="./multimedia/imagen/iconoLibro.PNG" alt="Ícono de Libro de Reclamaciones">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
