@@ -74,18 +74,24 @@ h2 {
   justify-content: center;
   flex-wrap: nowrap; }
 
-/*Formato de tabla*/
-table tr th {
-  background-color: #0D267A;
-  color: white;
-  text-align: center; }
+/*Formato de tabla
+table{
+    tr{
+        th{
+            background-color: $colorSecundario;
+            color: $colorTerceario;
+            text-align: center;
+        }
+    }
+}
 
-.carta__table {
-  border-spacing: 10px;
-  border-collapse: separate;
-  border-style: groove;
-  border-radius: 4%; }
-
+.carta__table{
+    border-spacing: 10px;
+    border-collapse:separate;
+    border-style:groove;
+    border-radius: 4%;
+}
+*/
 /*Formato de las imágenes
 .contornoGrid{
     border: solid 0.18em $colorSecundario;
@@ -140,11 +146,6 @@ hr {
 .home__seccion3 {
   grid-area: seccion3; }
 
-/*.home__imagen{
-    border: solid 0.18em $colorSecundario;
-    margin-bottom: 4%;
-    border-radius: 4%;
-}*/
 /*-- Grid NOSOTROS--*/
 .nosotros {
   display: grid;
@@ -378,6 +379,13 @@ hr {
   transition: transform 2s; }
   .transicion:hover {
     transform: scale(1.2); }
+
+.imgOpacidad {
+  opacity: 0.8; }
+
+.reservas__infoPersonal, .reservas__infoReservas {
+  margin: 4%;
+  display: block; }
 
 /*Espacio de elementos*/
 .formatoEspacio {

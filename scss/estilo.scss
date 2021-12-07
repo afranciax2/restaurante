@@ -96,7 +96,7 @@ h1{
 }
 
 
-/*Formato de tabla*/
+/*Formato de tabla
 table{
     tr{
         th{
@@ -113,6 +113,7 @@ table{
     border-style:groove;
     border-radius: 4%;
 }
+*/
 
 /*Formato de las imágenes
 .contornoGrid{
@@ -180,12 +181,6 @@ hr{
         grid-area: $desHome;
     }
 }
-
-/*.home__imagen{
-    border: solid 0.18em $colorSecundario;
-    margin-bottom: 4%;
-    border-radius: 4%;
-}*/
 
 /*-- Grid NOSOTROS--*/
 .nosotros{
@@ -433,6 +428,14 @@ hr{
     }
 }
 
+.imgOpacidad{
+    opacity: 0.8;
+}
+
+.reservas__infoPersonal, .reservas__infoReservas{
+    margin: 4%;
+    display: block;
+}
 
 /*Espacio de elementos*/
 @mixin margenes($marl, $marb, $marr) {
