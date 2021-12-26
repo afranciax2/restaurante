@@ -74,31 +74,6 @@ h2 {
   justify-content: center;
   flex-wrap: nowrap; }
 
-/*Formato de tabla
-table{
-    tr{
-        th{
-            background-color: $colorSecundario;
-            color: $colorTerceario;
-            text-align: center;
-        }
-    }
-}
-
-.carta__table{
-    border-spacing: 10px;
-    border-collapse:separate;
-    border-style:groove;
-    border-radius: 4%;
-}
-*/
-/*Formato de las imágenes
-.contornoGrid{
-    border: solid 0.18em $colorSecundario;
-    margin-bottom: 4%;
-    border-radius: 4%;
-}
-*/
 /*Formato de formulario*/
 .reservas__botones {
   margin-top: 2%;
@@ -115,17 +90,33 @@ hr {
   margin-left: 4%; }
 
 /* Media Queries*/
-@media only screen and (min-width: 768px) {
-  body {
-    background-color: black; } }
-
-@media only screen and (max-width: 767px) and (min-width: 321px) {
-  body {
-    background-color: red; } }
-
+/*-- Tablet --*/
 @media only screen and (max-width: 320px) {
-  body {
-    background-color: yellow; } }
+  .home {
+    display: grid;
+    grid-template-areas: "seccion1" "seccion2" "seccion3";
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    justify-content: space-evenly; }
+  .footer {
+    display: grid;
+    grid-template-areas: "redes" "copyright" "libro";
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: center; }
+  .gridBodyContacto {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center; } }
 
 /*-- Grid HOME --*/
 .home {
